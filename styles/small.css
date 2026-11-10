@@ -1,19 +1,60 @@
-/* ========== BASE MOBILE FIRST ========== */
-* { padding: 0; margin: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: Arial, sans-serif; color: #383c45; background: #fff; overflow-x: hidden; }
-img { max-width: 100%; height: auto; display: block; }
-a { text-decoration: none; }
-:root { --primary: #1d3557; --orange: #ff9100; --light: #f1faee; --grey: #777; }
+/* ========== BASE MOBILE ========== */
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
 
-/* ========== ANIMATIONS PRO ========== */
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    color: #383c45; 
+    background: #fff; 
+    overflow-x: hidden; 
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+a { 
+    text-decoration: none; 
+}
+
+:root { 
+    --primary: #1d3557; 
+    --orange: #ff9100; 
+    --light: #f1faee; 
+    --grey: #777; 
+}
+
+/* ========== ANIMATIONS ========== */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes pulseOrange { 0% { box-shadow: 0 0 0 0 rgba(255,145,0,0.5); } 100% { box-shadow: 0 0 0 12px rgba(255,145,0,0); } }
-#hero-section .hero-text { animation: fadeUp 0.8s ease both; }
-#hero-section #hero { animation: fadeIn 1s ease 0.2s both; }
-#about, #programmes, #evenements, #videos, #admissions, #contacts { animation: fadeUp 0.7s ease both; }
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+#hero-section .hero-text { 
+    animation: fadeUp 0.8s ease both; 
+}
+
+#hero-section #hero { 
+    animation: fadeIn 1s ease 0.2s both; 
+}
+
+#about, #programmes, #evenements, #videos, #admissions, #contacts { 
+    animation: fadeUp 0.7s ease both; 
+}
+
+@media (prefers-reduced-motion: reduce) { 
+    * {
+     animation: none !important; 
+     transition: none !important; 
+    } }
 
 /* ========== HEADER MOBILE - 5 LIENS ========== */
 header { background: var(--orange);
@@ -130,42 +171,202 @@ h2 { font-size: clamp(1.5rem, 6vw, 2rem); color: var(--primary); border-top: 2px
 .event-mini { min-width: 240px; max-width: 260px; scroll-snap-align: start; background: #fff; border: 1px solid #eee; border-top: 4px solid var(--orange); border-radius: 12px; padding: 18px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .event-mini:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.1); }
 .event-mini-tag { font-size: 0.75rem; font-weight: bold; color: var(--orange); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-.event-mini h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 8px; line-height: 1.3; }
-.event-mini p { font-size: 0.95rem; color: var(--grey); line-height: 1.5; margin-bottom: 10px; }
-.event-mini-more { color: var(--primary); font-weight: bold; font-size: 0.9rem; }
-.video-mini { min-width: 250px; max-width: 270px; scroll-snap-align: start; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.video-mini:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.1); }
-.video-placeholder { height: 150px; background: #e9e9e9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: #888; }
-.video-placeholder span { font-size: 2rem; }
-.video-placeholder p { font-size: 0.85rem; }
-.video-mini h3 { padding: 12px 14px 2px 14px; color: var(--primary); font-size: 1rem; }
-.video-mini p:last-child { padding: 0 14px 14px 14px; color: var(--grey); font-size: 0.9rem; }
-.scroll-hint { text-align: center; font-size: 0.8rem; color: #aaa; margin-top: 4px; }
+
+.event-mini h3 { 
+    color: var(--primary); 
+    font-size: 1.05rem; 
+    margin-bottom: 8px; 
+    line-height: 1.3; 
+}
+
+.event-mini p { 
+    font-size: 0.95rem; 
+    color: var(--grey); 
+    line-height: 1.5; 
+    margin-bottom: 10px; 
+}
+
+.event-mini-more { 
+    color: var(--primary); 
+    font-weight: bold; 
+    font-size: 0.9rem; 
+}
+
+.video-mini { 
+    min-width: 250px; 
+    max-width: 270px; 
+    scroll-snap-align: start; 
+    background: #fff; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    border: 1px solid #eee; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.video-mini:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 22px rgba(0,0,0,0.1); 
+}
+
+.video-placeholder { 
+    height: 150px; 
+    background: #e9e9e9; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 6px; 
+    color: #888; 
+}
+
+
+.video-placeholder span { 
+    font-size: 2rem; 
+}
+
+.video-placeholder p { 
+    font-size: 0.85rem; 
+}
+
+.video-mini h3 { 
+    padding: 12px 14px 2px 14px; 
+    color: var(--primary); 
+    font-size: 1rem; 
+}
+
+.video-mini p:last-child { 
+    padding: 0 14px 14px 14px; 
+    color: var(--grey); 
+    font-size: 0.9rem; 
+}
+
+.scroll-hint { 
+    text-align: center; 
+    font-size: 0.8rem; 
+    color: #aaa; 
+    margin-top: 4px; 
+}
 
 /* ========== ADMISSIONS ========== */
-#admissions { padding: 40px 16px; }
-#admissions h2, #contacts h2 { border-top: none; padding-top: 0; }
-.titre-processus { font-size: 1.2rem; color: #555; margin-bottom: 18px; }
-.admissions-layout { display: flex; flex-direction: column; gap: 28px; }
-.admissions-gauche ul { padding-left: 20px; margin-bottom: 25px; line-height: 1.75; }
-.files h3 { color: var(--grey); font-weight: normal; margin-bottom: 10px; }
-.admissions-droite { display: flex; flex-direction: column; gap: 14px; }
-.image-admission { height: 210px; background: #e0e0e0; border-radius: 10px; overflow: hidden; }
-.image-admission img { width: 100%; height: 100%; object-fit: cover; }
-.btn-formulaire { display: block; text-align: center; background: var(--orange); color: var(--primary); padding: 16px; font-weight: bold; border-radius: 6px; }
+#admissions {
+     padding: 40px 16px; 
+    }
+
+#admissions h2, #contacts h2 { 
+    border-top: none; 
+    padding-top: 0; 
+}
+
+.titre-processus { 
+    font-size: 1.2rem; 
+    color: #555; margin-bottom: 18px; 
+}
+
+.admissions-layout { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 28px; 
+}
+
+.admissions-gauche ul { 
+    padding-left: 20px; 
+    margin-bottom: 25px; 
+    line-height: 1.75; 
+}
+.files h3 { 
+    color: var(--grey); 
+    font-weight: normal; 
+    margin-bottom: 10px; 
+}
+.admissions-droite { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 14px; 
+}
+.image-admission { 
+    height: 210px; 
+    background: #e0e0e0; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+.image-admission img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.btn-formulaire { 
+    display: block; 
+    text-align: center; 
+    background: var(--orange); 
+    color: var(--primary); 
+    padding: 16px; 
+    font-weight: bold; 
+    border-radius: 6px; 
+}
 
 /* ========== CONTACTS ========== */
-#contacts { padding: 40px 16px 50px 16px; }
-.contacts-layout { display: flex; flex-direction: column; gap: 35px; }
-.coordonnees h3, .form-contact h3 { color: #555; font-weight: normal; margin-bottom: 20px; }
-.form-contact h3 { text-align: center; }
-.coord-item { margin-bottom: 20px; } .coord-titre { font-weight: bold; margin-bottom: 4px; }
-.coord-texte { color: var(--grey); } .coord-texte a { color: var(--grey); }
-.coord-horaires { background: var(--light); padding: 15px; border-radius: 8px; line-height: 1.6; }
-.form-contact form { display: flex; flex-direction: column; gap: 6px; }
-.form-contact label { font-size: 0.85rem; color: var(--grey); }
+#contacts { 
+    padding: 40px 16px 50px 16px; 
+}
 
-.form-contact input, .form-contact textarea { width: 100%; padding: 12px; border: 1px solid #333; font-size: 1rem; font-family: inherit; margin-bottom: 8px; }
+
+.contacts-layout { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 35px; 
+}
+
+.coordonnees h3, .form-contact h3 { 
+    color: #555; 
+    font-weight: normal; 
+    margin-bottom: 20px; 
+}
+
+.form-contact h3 { 
+    text-align: center; 
+}
+
+.coord-item { 
+    margin-bottom: 20px; 
+} .coord-titre { 
+    font-weight: bold; 
+    margin-bottom: 4px; 
+}
+
+.coord-texte { 
+    color: var(--grey); 
+} 
+
+.coord-texte a { 
+    color: var(--grey); 
+}
+
+.coord-horaires { 
+    background: var(--light); 
+    padding: 15px; 
+    border-radius: 8px; 
+    line-height: 1.6; 
+}
+
+.form-contact form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+}
+
+.form-contact label { 
+    font-size: 0.85rem; 
+    color: var(--grey); 
+}
+
+.form-contact input, .form-contact textarea { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #333; 
+    font-size: 1rem; 
+    font-family: inherit; 
+    margin-bottom: 8px; 
+}
 
 
 .form-contact button { 
@@ -247,21 +448,50 @@ footer {
     align-items: center; 
     gap: 8px; 
     font-size: 0.8rem; 
-    color: #999; 
+    color: var(--primary); 
     text-align: center; 
 }
 
 .footer-bottom a { 
-    color: #999; 
+    color: var(--primary); 
+}
+
+.footer-bottom a:hover { 
+    text-decoration: underline;
+    color: var(--light);
 }
 
 /* ========== TABLETTE 600px - 900px ========== */
 @media (min-width: 600px) {
-    .hero-btns { flex-direction: row; justify-content: center; }
-    .btn { padding: 14px 28px; }
-    .programs-container { display: grid; grid-template-columns: 1fr 1fr; }
-    .contacts-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .image-admission { height: 260px; }
-    .event-mini { min-width: 280px; }
-    .video-mini { min-width: 300px; }
+    .hero-btns { 
+        flex-direction: row; 
+        justify-content: center; 
+    }
+
+    .btn { 
+        padding: 14px 28px; 
+    }
+
+    .programs-container { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .contacts-layout { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px; 
+    }
+
+    .image-admission { 
+        height: 260px; 
+    }
+
+    .event-mini { 
+        min-width: 280px; 
+    }
+
+    .video-mini { 
+        min-width: 300px; 
+    }
 }
