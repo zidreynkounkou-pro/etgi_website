@@ -1,0 +1,73 @@
+/* DESKTOP UNIQUEMENT */
+@media (min-width: 901px) {
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+    /* Header desktop - 5 liens bien espacés */
+   /* Header desktop - LIENS À DROITE */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: nowrap; /* <-- LE FIX : on empêche le retour à la ligne */
+    justify-content: space-between;
+    align-items: center;
+}
+nav img { height: 70px; }
+.burger { display: none; }
+.nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    padding: 0;
+    gap: 32px;
+    width: auto; /* <-- LE FIX : il ne prend plus 100% */
+    order: 0;
+    margin-left: auto; /* <-- LE FIX : il se colle à droite */
+}
+.nav-links li { padding: 0; }
+.nav-links a { font-size: 1.05rem; }
+.nav-links a:hover { color: #fff; }
+
+    /* Hero desktop */
+    #hero-section { flex-direction: row; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto; padding: 50px 20px; gap: 50px; text-align: left; }
+    .hero-text { max-width: 550px; text-align: left; }
+    #hero { flex: 1; }
+    #hero img { max-width: 550px; margin-left: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.12); animation: float 4s ease-in-out infinite; }
+    .hero-btns { justify-content: flex-start; }
+
+    /* About + Programmes desktop */
+    #about, #programmes { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
+    .about-container { flex-direction: row; align-items: center; gap: 40px; }
+    .about-container img { max-width: 380px; }
+    .mission { flex: 1; }
+    .programs-container { flex-direction: row; display: flex; }
+    .program { flex: 1; padding: 28px; }
+
+    /* Evenements + Videos desktop */
+    #evenements, #videos { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
+    .events-scroll, .videos-scroll { gap: 22px; padding-bottom: 18px; }
+    .event-mini { min-width: 300px; padding: 22px; }
+    .video-mini { min-width: 320px; }
+    .video-placeholder { height: 170px; }
+
+    /* Admissions desktop */
+    #admissions { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .admissions-layout { flex-direction: row; gap: 60px; align-items: flex-start; }
+    .admissions-gauche { flex: 1; }
+    .admissions-droite { flex: 1.2; }
+    .image-admission { height: 285px; }
+    .btn-formulaire:hover { background: var(--primary); color: #fff; }
+
+    /* Contacts desktop */
+    #contacts { max-width: 1100px; margin: 0 auto; padding: 60px 20px 70px 20px; }
+    .contacts-layout { flex-direction: row; display: flex; gap: 80px; }
+    .coordonnees, .form-contact { flex: 1; }
+
+    /* Footer desktop */
+    footer { padding: 28px 20px 18px 20px; }
+    .footer-top { flex-direction: row; justify-content: space-between; max-width: 1100px; margin: 0 auto; text-align: left; }
+    .footer-nav { flex-wrap: nowrap; gap: 28px; }
+    .footer-bottom { flex-direction: row; justify-content: center; gap: 25px; max-width: 1100px; margin: 0 auto; }
+}
