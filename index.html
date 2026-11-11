@@ -1,226 +1,384 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ETGI, Ecole Technique de Gestion et de l'Informatique.">
-    <meta name="description" content="ETGI - Ecole Technique de Gestion et de l'Informatique. Formations en Gestion et Informatique à Brazzaville.">
-    <title>ETGI - Ecole Technique de Gestion et de l'Informatique</title>
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ETGI - Ecole Technique de Gestion et de l'Informatique à Brazzaville."
+    />
+    <title>ETGI - Gestion & Informatique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
     <script src="scripts/hamberger.js" defer></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#hero-section" class="logo-link"><img src="images/logo.webp" alt="Logo de l'ETGI"></a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="burger">☰</label>
-            <ul class="nav-links">
-                <li><a href="#hero-section">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#programmes">Programmes</a></li>
-                <li><a href="#admissions">Admissions</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <p>🏠 Brazzaville, Congo • 📞 +242 06 000 00 00 • Inscriptions 2026 Ouvertes</p>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav" id="mainNav" aria-label="Navigation principale">
+        <a href="#hero" class="logo">
+          <img src="images/logo-itgi.webp" alt="Logo ETGI" />
+          <span>ETGI <em>Gestion & Informatique</em></span>
+        </a>
+        <button
+          class="burger"
+          id="burgerBtn"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="active">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#programmes">Programmes</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contacts" class="nav-cta">S'inscrire</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="hero-section">
-            <div class="hero-text">
-                <h1>Bienvenue à l'ETGI</h1>
-                <div class="school-name">
-                    <p>ÉCOLE TECHNIQUE DE</p>
-                    <p class="second-p">GESTION ET DE L'INFORMATIQUE</p>
-                </div>
-                <div class="description">
-                    <p>Nous offrons des formations de qualité pour vous préparer à une carrière réussie dans le domaine de la gestion et de l'informatique. Votre réussite est notre priorité.</p>
-                    <p>Découvrez nos programmes et rejoignez notre communauté d'apprenants.</p>
-                    <div class="hero-btns">
-                        <a href="#programmes" class="btn">Voir les programmes</a>
-                        <a href="#admissions" class="btn btn-secondary">S'inscrire</a>
-                    </div>
-                </div>
+      <!-- HERO -->
+      <section id="hero" class="hero">
+        <div class="hero-media">
+          <img src="images/hero.webp" alt="Campus ETGI à Brazzaville" />
+          <div class="float-card card-1">
+            <strong>98%</strong>
+            <span>Taux de réussite</span>
+          </div>
+          <div class="float-card card-2">
+            <span class="dot"></span>
+            <strong>2 Filières</strong>
+            <span>Gestion • Informatique</span>
+          </div>
+        </div>
+        <div class="hero-content">
+          <span class="badge">✦ Inscriptions Ouvertes — Rentrée 2026</span>
+          <h1>
+            Construis ton avenir en <span>Gestion</span> &
+            <span>Informatique.</span>
+          </h1>
+          <p class="hero-sub">
+            L'ETGI te forme aux métiers qui recrutent à Brazzaville et partout
+            en Afrique. Cours pratiques, stages, diplôme reconnu.
+          </p>
+          <div class="hero-btns">
+            <a href="#programmes" class="btn-primary">Voir les programmes →</a>
+            <a href="#admissions" class="btn-ghost">▶ Comment s'inscrire</a>
+          </div>
+          <div class="hero-avatars">
+            <div class="avatars" aria-hidden="true">
+              <span>JD</span><span>AK</span><span>MB</span><span>+</span>
             </div>
-            <div id="hero"><img src="images/hero.webp" alt="Étudiants de l'ETGI"></div>
-        </section>
+            <p>
+              <strong>500+ étudiants</strong> nous font confiance<br />
+              <span class="stars">★★★★★ 4.9/5</span>
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="about">
-            <h2>A Propos de l'ETGI</h2>
-            <div class="about-container">
-                <div class="mission">
-                    <h3>Notre mission</h3>
-                    <p>Notre mission est de fournir une éducation de qualité dans le domaine de la gestion et de l'informatique, en préparant nos étudiants à relever les défis du monde professionnel. Nous aspirons à être un centre d'excellence reconnu pour l'innovation, la recherche et la formation de professionnels compétents.</p>
-                </div>
-                <div class="about-image"><img src="images/about.webp" alt="Campus de l'ETGI"></div>
-            </div>
-            <div class="choice">
-                <h3>Pourquoi choisir l'ETGI ?</h3>
-                <ul>
-                    <li>Formations de qualité dispensées par des professionnels expérimentés.</li>
-                    <li>Programmes adaptés aux besoins du marché du travail.</li>
-                    <li>Environnement d'apprentissage stimulant et collaboratif.</li>
-                    <li>Accès à des ressources et technologies de pointe.</li>
-                    <li>Opportunités de stages et de réseautage avec des entreprises partenaires.</li>
-                </ul>
-            </div>
-        </section>
+      <!-- PROGRAMMES -->
+      <section id="programmes" class="section">
+        <span class="eyebrow">Nos Programmes</span>
+        <h2>Deux filières, un seul objectif :<br />ton emploi.</h2>
+        <p class="sub">
+          Choisis ta voie. On t'accompagne de l'inscription jusqu'à ton premier emploi.
+        </p>
+        <div class="prog-grid">
+          <article class="prog-card">
+            <div class="prog-icon orange">📊</div>
+            <h3>Gestion</h3>
+            <p>Administration, finance, marketing, RH. Apprends à gérer une entreprise comme un pro.</p>
+            <ul>
+              <li>✓ Comptabilité & Finance</li>
+              <li>✓ Marketing Digital</li>
+              <li>✓ Gestion de projet</li>
+            </ul>
+            <a href="#admissions">Découvrir</a>
+          </article>
+          <article class="prog-card blue">
+            <div class="prog-icon blue">💻</div>
+            <h3>Informatique</h3>
+            <p>Code, web, cybersécurité et IA. Deviens le développeur que les entreprises cherchent.</p>
+            <ul>
+              <li>✓ Développement Web</li>
+              <li>✓ Cybersécurité</li>
+              <li>✓ Intelligence Artificielle</li>
+            </ul>
+            <a href="#admissions">Découvrir</a>
+          </article>
+        </div>
+      </section>
 
-        <section id="programmes">
-            <h2>Nos Programmes</h2>
-            <p class="section-intro">Deux filières d'excellence pour construire votre avenir professionnel.</p>
-            <div class="programs-container">
-                <div class="program">
-                    <h3>Gestion</h3>
-                    <p>Notre programme de gestion offre une formation complète en administration des affaires, finance, marketing et ressources humaines. Les étudiants acquièrent les compétences nécessaires pour gérer efficacement les organisations et prendre des décisions stratégiques.</p>
-                    <a href="#admissions" class="link-program">Découvrir la filière &rarr;</a>
-                </div>
-                <div class="program">
-                    <h3>Informatique</h3>
-                    <p>Le programme d'informatique couvre les domaines de la programmation, du développement web, de la cybersécurité et de l'intelligence artificielle. Les étudiants développent des compétences techniques avancées pour répondre aux besoins croissants du secteur technologique.</p>
-                    <a href="#admissions" class="link-program">Découvrir la filière &rarr;</a>
-                </div>
-            </div>
-        </section>
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="about-img">
+          <img src="images/about.webp" alt="Campus ETGI" />
+          <div class="about-badge">
+            <strong>Depuis 2015</strong>
+            <span>10 ans d'expertise</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="eyebrow">Pourquoi l'ETGI ?</span>
+          <h2>L'école qui te prépare vraiment au travail.</h2>
+          <p>Pas que de la théorie. Tu pratiques dès la première semaine, tu fais des stages, tu construis ton réseau.</p>
+          <div class="check-grid">
+            <div><span>🎓</span><strong>Formateurs pros</strong><p>Des professionnels en activité.</p></div>
+            <div><span>💼</span><strong>Stages garantis</strong><p>Avec nos entreprises partenaires.</p></div>
+            <div><span>🖥️</span><strong>Labos modernes</strong><p>Ordinateurs & wifi haut débit.</p></div>
+            <div><span>🤝</span><strong>Petites classes</strong><p>Suivi personnalisé pour chacun.</p></div>
+          </div>
+          <a href="#contacts" class="btn-primary small">Parler à un conseiller →</a>
+        </div>
+      </section>
 
-        <section id="evenements">
+      <!-- STATS -->
+      <section class="stats" aria-label="Chiffres clés">
+        <div><strong>500+</strong><span>Étudiants formés</span></div>
+        <div><strong>98%</strong><span>Réussite</span></div>
+        <div><strong>15+</strong><span>Formateurs experts</span></div>
+        <div><strong>30+</strong><span>Entreprises partenaires</span></div>
+      </section>
+
+      <!-- ÉVÉNEMENTS : DÉFILE DROITE -> GAUCHE -->
+      <section id="evenements" class="section">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">Vie à l'ETGI</span>
             <h2>Nos Événements</h2>
-            <p class="section-intro">Les moments forts de la vie à l'ETGI.</p>
-            <div class="events-scroll">
-                <article class="event-mini">
-                    <p class="event-mini-tag">Portes Ouvertes</p>
-                    <h3>Journée Portes Ouvertes</h3>
-                    <p>Découvrez nos filières et visitez nos laboratoires.</p>
-                    <span class="event-mini-more">Voir &rarr;</span>
-                </article>
-                <article class="event-mini">
-                    <p class="event-mini-tag">Atelier</p>
-                    <h3>Atelier Code & IA</h3>
-                    <p>Créez votre premier site web avec nos formateurs.</p>
-                    <span class="event-mini-more">Voir &rarr;</span>
-                </article>
-                <article class="event-mini">
-                    <p class="event-mini-tag">Cérémonie</p>
-                    <h3>Remise des Diplômes 2026</h3>
-                    <p>Célébrons la réussite de nos nouveaux diplômés.</p>
-                    <span class="event-mini-more">Voir &rarr;</span>
-                </article>
-                <article class="event-mini">
-                    <p class="event-mini-tag">Conférence</p>
-                    <h3>Métiers du Digital</h3>
-                    <p>Rencontrez des professionnels du secteur.</p>
-                    <span class="event-mini-more">Voir &rarr;</span>
-                </article>
-            </div>
-            <p class="scroll-hint">← Faites défiler pour voir plus →</p>
-        </section>
+          </div>
+          <a href="#contacts">Tous voir</a>
+        </div>
 
-        <section id="videos">
-            <h2>En Vidéo</h2>
-            <p class="section-intro">Nos dernières vidéos. Les nouvelles vidéos apparaîtront ici.</p>
-            <div class="videos-scroll">
-                <article class="video-mini">
-                    <div class="video-placeholder"><span>🎥</span><p>Vidéo à venir</p></div>
-                    <h3>Présentation de l'ETGI</h3>
-                    <p>Bientôt disponible</p>
-                </article>
-                <article class="video-mini">
-                    <div class="video-placeholder"><span>🎥</span><p>Vidéo à venir</p></div>
-                    <h3>Vie au campus</h3>
-                    <p>Bientôt disponible</p>
-                </article>
-                <article class="video-mini">
-                    <div class="video-placeholder"><span>🎥</span><p>Vidéo à venir</p></div>
-                    <h3>TP Informatique</h3>
-                    <p>Bientôt disponible</p>
-                </article>
-                <article class="video-mini">
-                    <div class="video-placeholder"><span>🎥</span><p>Vidéo à venir</p></div>
-                    <h3>Témoignages étudiants</h3>
-                    <p>Bientôt disponible</p>
-                </article>
-            </div>
-            <p class="scroll-hint">← Faites défiler pour voir plus →</p>
-        </section>
+        <div class="marquee" data-marquee>
+          <div class="marquee-track">
+            <article class="event-card">
+              <span class="tag">Portes Ouvertes</span>
+              <h3>Journée Portes Ouvertes</h3>
+              <p>Visite les labos, rencontre les formateurs.</p>
+              <b>Voir</b>
+            </article>
 
-        <section id="admissions">
-            <h2>Admissions</h2>
-            <p class="intro">Les admissions à l'ETGI sont ouvertes aux étudiants motivés et passionnés.</p>
-            <h3 class="titre-processus">Processus d'admission</h3>
-            <div class="admissions-layout">
-                <div class="admissions-gauche">
-                    <ul>
-                        <li>Soumettre une demande d'admission en ligne.</li>
-                        <li>Fournir les documents requis.</li>
-                        <li>Participer à un entretien d'admission si nécessaire.</li>
-                        <li>Recevoir la décision d'admission et les instructions pour l'inscription.</li>
-                    </ul>
-                    <div class="files">
-                        <h3>Documents requis</h3>
-                        <ul>
-                            <li>Formulaire de demande d'admission rempli.</li>
-                            <li>Relevés de notes et diplômes précédents.</li>
-                            <li>Lettre de motivation.</li>
-                            <li>Pièce d'identité valide.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="admissions-droite">
-                    <div class="image-admission"><img src="images/admission.webp" alt="Étudiants ETGI en cours d'admission"></div>
-                    <a href="documents/formulaire-admission-etgi.pdf" download class="btn-formulaire">Telecharger le formulaire de demande</a>
-                </div>
-            </div>
-        </section>
+            <article class="event-card">
+              <span class="tag blue">Atelier</span>
+              <h3>Atelier Code & IA</h3>
+              <p>Crée ton premier site web en 2h.</p>
+              <b>Voir</b>
+            </article>
 
-        <section id="contacts">
-            <h2>Contactez-Nous</h2>
-            <p class="contacts-intro">Une question sur nos programmes ou les admissions ? Écrivez-nous, nous vous répondons sous 24h.</p>
-            <div class="contacts-layout">
-                <div class="coordonnees">
-                    <h3>Nos Coordonnées</h3>
-                    <div class="coord-item"><p class="coord-titre">Adresse</p><p class="coord-texte">Brazzaville, République du Congo</p></div>
-                    <div class="coord-item"><p class="coord-titre">Phone</p><p class="coord-texte"><a href="tel:+242060000000">+242 06 000 00 00</a></p></div>
-                    <div class="coord-item"><p class="coord-titre">Email</p><p class="coord-texte"><a href="mailto:contact@etgi.cg">contact@etgi.cg</a></p></div>
-                    <div class="coord-horaires"><p><strong>Horaires d'ouverture</strong></p><p>Lun - Ven : 8h00 - 17h00</p><p>Sam : 9h00 - 13h00</p></div>
-                </div>
-                <div class="form-contact">
-                    <h3>Envoyer un message</h3>
-                    <form action="#" method="post">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message..." required></textarea>
-                        <button type="submit">Envoyer le message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+            <article class="event-card">
+              <span class="tag green">Cérémonie</span>
+              <h3>Remise des Diplômes 2026</h3>
+              <p>Célébrons nos nouveaux diplômés.</p>
+              <b>Voir</b>
+            </article>
+
+            <article class="event-card">
+              <span class="tag">Conférence</span>
+              <h3>Métiers du Digital</h3>
+              <p>Les entreprises viennent te recruter.</p>
+              <b>Voir</b>
+            </article>
+
+            <article class="event-card" aria-hidden="true">
+              <span class="tag">Portes Ouvertes</span>
+              <h3>Journée Portes Ouvertes</h3>
+              <p>Visite les labos, rencontre les formateurs.</p>
+              <b>Voir</b>
+            </article>
+
+            <article class="event-card" aria-hidden="true">
+              <span class="tag blue">Atelier</span>
+              <h3>Atelier Code & IA</h3>
+              <p>Crée ton premier site web en 2h.</p>
+              <b>Voir</b>
+            </article>
+
+            <article class="event-card" aria-hidden="true">
+              <span class="tag green">Cérémonie</span>
+              <h3>Remise des Diplômes 2026</h3>
+              <p>Célébrons nos nouveaux diplômés.</p>
+              <b>Voir</b>
+            </article>
+
+            <article class="event-card" aria-hidden="true">
+              <span class="tag">Conférence</span>
+              <h3>Métiers du Digital</h3>
+              <p>Les entreprises viennent te recruter.</p>
+              <b>Voir</b>
+            </article>
+          </div>
+
+        </div>
+        <p class="scroll-hint">Survole pour mettre en pause • Glisse pour explorer</p>
+      </section>
+
+      <!-- VIDÉOS : DÉFILE GAUCHE -> DROITE -->
+      <section id="videos" class="section videos-section">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">En Vidéo</span>
+            <h2>Découvre l'ETGI en vidéo</h2>
+          </div>
+
+          <a href="#contacts">Toutes les vidéos </a>
+        </div>
+
+
+        <div class="marquee reverse" data-marquee>
+          <div class="marquee-track">
+            <article class="video-card">
+              <div class="video-thumb">▶</div>
+              <h3>Visite du Campus</h3>
+              <p>2 min • Découvre nos labos</p>
+            </article>
+            <article class="video-card">
+              <div class="video-thumb">▶</div>
+              <h3>Nos étudiants témoignent</h3>
+              <p>3 min • Ils racontent l'ETGI</p>
+            </article>
+            <article class="video-card">
+              <div class="video-thumb">▶</div>
+              <h3>Cours d'Informatique</h3>
+              <p>4 min • En immersion</p>
+            </article>
+            <article class="video-card">
+              <div class="video-thumb">▶</div>
+              <h3>Journée Portes Ouvertes</h3>
+              <p>1 min • L'ambiance ETGI</p>
+            </article>
+            <article class="video-card" aria-hidden="true">
+              <div class="video-thumb">▶</div>
+              <h3>Visite du Campus</h3>
+              <p>2 min • Découvre nos labos</p>
+            </article>
+            <article class="video-card" aria-hidden="true">
+              <div class="video-thumb">▶</div>
+              <h3>Nos étudiants témoignent</h3>
+              <p>3 min • Ils racontent l'ETGI</p>
+            </article>
+            <article class="video-card" aria-hidden="true">
+              <div class="video-thumb">▶</div>
+              <h3>Cours d'Informatique</h3>
+              <p>4 min • En immersion</p>
+            </article>
+            <article class="video-card" aria-hidden="true">
+              <div class="video-thumb">▶</div>
+              <h3>Journée Portes Ouvertes</h3>
+              <p>1 min • L'ambiance ETGI</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMISSIONS -->
+      <section id="admissions" class="section admissions">
+        <div class="adm-left">
+          <span class="eyebrow">Admissions</span>
+          <h2>Rejoins l'ETGI en 4 étapes simples.</h2>
+          <p class="sub">Pas de dossier compliqué. On te guide du début à la fin.</p>
+          <div class="steps">
+            <div><span>1</span><div><strong>Demande en ligne</strong><p>Remplis le formulaire en 2 minutes.</p></div></div>
+            <div><span>2</span><div><strong>Documents</strong><p>Bulletins, diplôme, lettre de motivation.</p></div></div>
+            <div><span>3</span><div><strong>Entretien</strong><p>Un petit échange pour connaître ton projet.</p></div></div>
+            <div><span>4</span><div><strong>Bienvenue !</strong><p>Tu reçois ta confirmation d'inscription.</p></div></div>
+          </div>
+        </div>
+        <div class="adm-right">
+          <img src="images/admission.webp" alt="Admission ETGI" />
+          <div class="adm-box">
+            <h3>Prêt à commencer ?</h3>
+            <p>Télécharge le formulaire et envoie-le nous.</p>
+            <a href="documents/formulaire-admission-etgi.pdf" download class="btn-primary full">⬇ Télécharger le formulaire</a>
+            <small>Réponse sous 24h • Sans frais de dossier</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTS -->
+      <section id="contacts" class="contacts">
+        <div class="contact-left">
+          <span class="eyebrow">Contact</span>
+          <h2>Une question ?<br />Écris-nous.</h2>
+          <p>On te répond sous 24h, même le week-end.</p>
+          <div class="coord">
+            <span>🏠</span>
+            <div><strong>Adresse</strong><p>Brazzaville, République du Congo</p></div>
+          </div>
+          <div class="coord">
+            <span>📞</span>
+            <div><strong>Téléphone</strong><p><a href="tel:+242060000000">+242 06 000 00 00</a></p></div>
+          </div>
+          <div class="coord">
+            <span>✉️</span>
+            <div><strong>Email</strong><p><a href="mailto:contact@etgi.cg">contact@etgi.cg</a></p></div>
+          </div>
+          <div class="hours">
+            <strong>Horaires</strong>
+            <p>Lun - Ven : 8h00 - 17h00 • Sam : 9h00 - 13h00</p>
+          </div>
+        </div>
+        <form class="contact-form">
+          <h3>Envoyer un message</h3>
+          <label>Nom complet*
+            <input type="text" placeholder="Ex: John Doe" required />
+          </label>
+          <label>Email*
+            <input type="email" placeholder="votre@email.com" required />
+          </label>
+          <label>Téléphone*
+            <input type="tel" placeholder="+242 ..." required />
+          </label>
+          <label>Message*
+            <textarea rows="4" placeholder="Bonjour, je veux m'inscrire en Informatique..." required></textarea>
+          </label>
+          <button type="submit" class="btn-primary full">Envoyer le message →</button>
+          <p class="form-note">🔒 Tes infos restent privées. Aucun spam.</p>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-top">
-            <a href="#hero-section" class="footer-logo"><img src="images/logo.webp" alt="Logo de l'ETGI"></a>
-            <ul class="footer-nav">
-                <li><a href="#hero-section">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#programmes">Programmes</a></li>
-                <li><a href="#admissions">Admissions</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="X">X</a>
-            </div>
+      <div class="foot-grid">
+        <div>
+          <a href="#hero" class="logo light"><img src="images/logo-itgi.webp" alt="ETGI" /><span>ETGI</span></a>
+          <p>L'école technique de Gestion et de l'Informatique à Brazzaville.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 ETGI - Tous droits réservés.</p>
-            <a href="#">Regles de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
+        <div>
+          <h4>Liens</h4>
+          <a href="#about">À propos</a>
+          <a href="#programmes">Programmes</a>
+          <a href="#admissions">Admissions</a>
         </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Brazzaville, Congo</p>
+          <p>+242 06 000 00 00</p>
+          <p>contact@etgi.cg</p>
+        </div>
+        <div>
+          <h4>Suivez-nous</h4>
+          <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© 2026 ETGI - Tous droits réservés.</p>
+        <p><a href="#">Confidentialité</a> • <a href="#">Conditions</a></p>
+      </div>
     </footer>
-</body>
+
+  </body>
 </html>
